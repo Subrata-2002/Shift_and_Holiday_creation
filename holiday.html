@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/holidaystyle.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+
+    <script type="module" src="./js/time.js"></script>
+</head>
+
+<style>
+   
+
+
+  
+</style>
+
+<body>
+
+    <div class="mcontainer">
+
+        <div class="container-left">
+
+            <nav class="sidebar">
+                <header>
+
+                    <div style="display: flex;">
+                        <div class="headertime">
+                            <div class="leftdate" style="padding-bottom: 16px;">
+                                <p class="todaydate" style="margin-top: 34px;">Today</p>
+                                <p class="datemonth" style="margin-top: -20px;" id="date"></p>
+                            </div>
+                            <div class="righttime" style="margin-left: 10px;">
+
+                                <span class="timeonly" id="time" style="margin-left: 10px;">
+                                    <p class="hourss">hrs.</p>
+                                </span>
+                                <p class="counting" style="margin-top: -8px;">counting...</p>
+                            </div>
+                        </div>
+
+                        <!-- that three line icon when make it mobile size  -->
+                        <div class="app-icon">
+
+                            <button style="font-size: 40px;font-weight: 500;border: none;"
+                                id="vrtclline">&#9776;</button>
+                        </div>
+                    </div>
+                    <div class="sngleline"></div>
+                </header>
+
+
+                <div class="menu-bar" id="leftmenu">
+                    <div class="menu">
+
+                        <ul class="menu-links">
+                            <div style="padding-left: 5px; padding-right: 5px;">
+
+                                <li class="my-link">
+                                    <a href="./index.html">
+                                        <!-- <i class="fa-solid fa-house icon"></i> -->
+                                        <i class="fas fa-th-large icon"></i>
+
+                                        <span class="text nav-text">All Apps</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <!-- <i class="fa-solid fa-house icon"></i> -->
+                                        <i class="fas fa-chart-bar icon"></i>
+                                        <span class="text nav-text">Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-users icon"></i>
+                                        <span class="text nav-text">Employees</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-list-check icon"></i>
+                                        <span class="text nav-text">Roles And Premissions</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="./index2.html">
+                                        <i class="fas fa-clock icon"></i>
+                                        <!-- <span class="text nav-text" onclick="$('#reportOptionsHidden').toggle('fast')">Time And Attendence</span> -->
+                                        <span class="text nav-text">Time And Attendence</span>
+
+                                        <!-- <button >Time and attendence</button> -->
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot icon"></i>
+                                        <span class="text nav-text">Geo Fence</span>
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-person-walking-arrow-right icon"></i>
+                                        <span class="text nav-text">Leave</span>
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fas fa-file-alt icon"></i>
+                                        <span class="text nav-text">Reports</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                        <div class="righttime genparent">
+                            <span class="timeonly gen">GewinnsHR</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="container-right">
+            <div class="container-right-top">
+                <div class="header-top">
+
+                    <div class="allcontents">
+
+                        <div class="frstcontents">
+
+                            <input type="search" class="srchcon" placeholder="Search">
+                        </div>
+
+                        <div class="scndcontents">
+
+                            <p style="font-size: 20px;margin-bottom: 0rem;">English (UK)</p>
+                            <select name="" id="" class="selecop"></select>
+                        </div>
+
+                        <div class="thirdcontents">
+
+                            <div class="allinline">
+                                <p class="firsttxt">Radheshyam Mallick</p>
+                                <p class="secondtxt">ID: SM/KMC/5/002</p>
+                                <p class="thirdtxt">ADMIN</p>
+                            </div>
+                            <div class="imgandoptn">
+                                <img class="mimg" src="./images/profile.jpg" alt="">
+                                <select name="" id="" class="optn"></select>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-right-middle">
+
+                <div class="header-middle">
+                    <div class="name">
+                        <a href="holiday.html" class="apply" id="applyclr">Holiday</a>
+                        <a href="shift.html" class="apply">Shift</a>
+                        <a class="apply">Leave</a>
+                        <a class="apply">Roaster</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container-right-body">
+
+                <div class="header-body">
+                  
+                    <!-- upto here same as shift.html  -->
+
+                    <div class="mheader-body-details">
+                        <div>
+                            <h3 class="myh2">Holiday</h3>
+                        </div>
+
+                        <div style="display: flex; gap: 2%;">
+
+                            <select class="optn" id="statusSelect">
+                                <option value="">2022</option>
+                                <option value="Active">2023</option>
+                                <option value="Inactive">2024</option>
+                            </select>
+
+                            <select class="optn" id="statusSelect">
+                                <option value="">All</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+
+                            <select class="optn" name="" id="toggleSelect">
+                                <option style="background-color: white; color: rgb(3, 98, 102);" value="Add New">Add
+                                    Shift</option>
+                                <option value="Create New" id="createshift">Create New</option>
+                                <option value="Bulk Upload">Bulk Upload</option>
+                            </select>
+                            <!-- <div style="border: 1px solid black; width: 150px; height: 40px; border-radius: 6px;">Add Shift</div> -->
+                        </div>
+                    </div>
+
+
+                    <div style="padding-right: 6px; padding-left: 6px;">
+
+                        <div class="header-body-details-second">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                style="margin-left: 4px;margin-top: 8px;width: 24px;height: 14px;">
+
+                            <p class="pdata" style="padding-left: 30px;align-items: center;">HOLIDAY NAME</p>
+                            <p class="pdata" >DATE</p>
+                            <p class="pdata" >TYPE</p>
+                            <p class="pdata" >DEPARTMENT</p>
+                            <p class="pdata" >DESIGNATION</p>
+                            <p class="pdata" >DAY</p>
+                            <p class="pdata">ACTION</p>
+                            <!-- <p class="pdata"></p> -->
+
+
+                        </div>
+                    </div>
+
+
+                    <div id="formDetails">
+                        <!-- i show form data here  -->
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- form  -->
+
+    <div class="popup hidden" id="popupform">
+        <div class="popup-content">
+
+            <div class="firstpop">
+                <button class="dltbtn" id="exitform">
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                    x
+                </button>
+            </div>
+
+            <div class="secondpop">
+                <input type="button" value="New" class="shftbtn bckcolor" id="newbtn">
+                <input type="button" value="Other" class="shftbtn shftbtn2" id="otherbtn">
+            </div>
+            <div class="middlepop">
+
+                <form class="firstform" id="mainForm">
+
+
+                    <!-- form1 data  -->
+
+                    <div id="form1">
+
+                        <div id="myrow" class="row">
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="list_name">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">List Name<sup
+                                            style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="holiday_name">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Name<sup
+                                            style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="holiday_type">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Type</span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="date" class="form-control" id="holiDate">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Date<sup style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div id="mybtn" class="col" style="cursor: pointer;">
+                                <button type="button" class="my-button">
+                                    <i class="fa-solid fa-plus fa-beat"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2nd row form  -->
+
+                        <div id="myrow" class="row">
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="shift_name">
+                                <div class="mdltxt">
+                                    <span>List Name<sup style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Name<sup
+                                            style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Type</span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="date" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Date<sup style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div id="mybtn" class="col" style="cursor: pointer;">
+                                <button type="button" class="my-button">
+                                    <i class="fa-solid fa-plus fa-beat"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 3rd row form  -->
+
+                        <div id="myrow" class="row">
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="shift_name">
+                                <div class="mdltxt">
+                                    <span>List Name<sup style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Name<sup
+                                            style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="text" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Holiday Type</span>
+                                </div>
+                            </div>
+
+                            <div class="col singletxtfld">
+                                <input type="date" class="form-control" id="start_time">
+                                <div class="mdltxt">
+                                    <span style="color: rgb(6, 67, 83);">Date<sup style="color: red;">*</sup></span>
+                                </div>
+                            </div>
+
+                            <div id="mybtn" class="col" style="cursor: pointer;">
+                                <button type="button" class="my-button">
+                                    <i class="fa-solid fa-plus fa-beat"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="asgn_holiday">
+
+                            <span style="color: rgb(173, 173, 255);">Assign Holiday</span>
+                            <div class="sngl_line"></div>
+
+
+
+                            <div class="dpt_dsg">
+
+                                <div class="department">
+                                    <div class="dept_upper_text">
+                                        <p class="deptext">Department<sup style="color: red;">*</sup></p>
+                                    </div>
+
+                                    <div class="depttypes">
+                                        <div style="display: flex;">
+                                            <p class="deptsingletype">Management</p>
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <p class="deptsingletype" style="width: 46px;">HR</p>
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <p class="deptsingletype" style="width: 80px;">Production</p>
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <p class="deptsingletype" style="width: 50px;">Sales</p>
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+                                        </div>
+                                        <!-- <p class="deptsingletype" style="width: 40px;">HR
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+                                        </p>
+                                        <p class="deptsingletype" style="width: 90px;">Production
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+
+                                        </p>
+                                        <p class="deptsingletype" style="width: 50px;">Sales
+                                            <button class="depttypecancelbtn"
+                                                onclick="removeDepartment(this)">x</button>
+
+                                        </p> -->
+                                    </div>
+
+                                </div>
+
+
+                                <div class="department">
+
+                                    <div class="desig_upper_text">
+                                        <p class="desig_text">Designation<sup style="color: red;">*</sup></p>
+                                    </div>
+                                    <div class="depttypes">
+
+                                        <div style="display: flex;">
+                                            <p class="desigsingletype" style="width: 75px; ">HR Admin</p>
+                                            <button class="desgtypecancelbtn" onclick="removeDesig(this)">x</button>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <p class="desigsingletype" style="width: 75px;">Manager</p>
+                                            <button class="desgtypecancelbtn" onclick="removeDesig(this)">x</button>
+
+                                        </div>
+                                        <div style="display: flex;">
+                                            <p class="desigsingletype" style="width: 80px;">Executive</p>
+                                            <button class="desgtypecancelbtn" onclick="removeDesig(this)">x</button>
+
+                                        </div>
+                                        <!-- <p class="desigsingletype"
+                                            style="width: 75px; background-color: rgb(212, 212, 255);">HR Admin
+                                            <button class="desgtypecancelbtn"
+                                                onclick="removeDesig(this)">x</button>
+                                        </p>
+                                        <p class="desigsingletype"
+                                            style="width: 75px;background-color: rgb(212, 212, 255);">Manager
+                                            <button class="desgtypecancelbtn"
+                                                onclick="removeDesig(this)">x</button>
+                                        </p>
+                                        <p class="desigsingletype"
+                                            style="width: 80px;background-color: rgb(212, 212, 255);">Executive
+                                            <button class="desgtypecancelbtn"
+                                                onclick="removeDesig(this)">x</button>
+                                        </p> -->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- form2 data  -->
+                    <!-- form1 that department and designation cross things  -->
+                    <div id="form2" class="hidden">
+                        <div class="weekOff">
+                            <div class="weekoffcontent">
+                                <p class="weekday">Saturday x</p>
+                                <p class="weekday">Sunday x</p>
+
+                                <div class="weekoffuppertxt">
+                                    <p style="font-size: 12px;padding-left:6px;">Add New Week off<sup
+                                            style="color: red;">*</sup></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- button of next and add  -->
+            <div class="btmpop" style="height: 10%; padding-bottom: 20px;">
+                <div class="mheader-body-details" style="margin-left: 2px; margin-right: 2px;">
+                    <div>
+                        <a href=""
+                            style="font-size:18px; font-weight:500; color: rgb(10,120,135); text-decoration: none;">Add
+                            New Shift</a>
+                    </div>
+
+                    <div style="display: flex; gap: 4%;">
+
+                        <button type="button"
+                            style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px;">Reset</button>
+                        <button
+                            style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px;"
+                            id="createButton">Create</button>
+                        <!-- <button
+                            style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px; "
+                            class="hidden" id="submitButton">Submit</button> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- //model  -->
+    <!-- javascript work  -->
+    <script>
+
+        const mainForm = document.getElementById("mainForm");
+        const toggleSelect = document.getElementById("toggleSelect");
+        const popupform = document.getElementById("popupform");
+        const exitformbtn = document.getElementById("exitform");
+        const createButton = document.getElementById("createButton");
+        const formDetails = document.getElementById("formDetails");
+        const form1 = document.getElementById("form1");
+        const form2 = document.getElementById("form2");
+        const otherbtn = document.getElementById("otherbtn");
+        const newbtn = document.getElementById("newbtn");
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            toggleSelect.addEventListener('change', function () {
+
+                const selectedOption = toggleSelect.value;
+
+                if (selectedOption === "Create New") {
+                    // window.alert("working");
+                    console.log("working");
+                    popupform.classList.remove("hidden");
+
+                    exitformbtn.addEventListener('click', function (e) {
+                        popupform.classList.add('hidden');
+                        window.location.reload();
+                    });
+                }
+                else {
+                    window.alert("Please select create new option");
+                }
+
+
+            })
+        })
+
+
+        function updateFormDetails() {
+
+
+            const holiday_name = document.getElementById('holiday_name').value;
+            const holiDate = document.getElementById('holiDate').value;
+            const holiday_type = document.getElementById('holiday_type').value;
+
+
+            const selectedDate = new Date(holiDate);
+            console.log(selectedDate);
+
+            // Get the day (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+            const dayOfWeek = selectedDate.getDay();
+
+            // Now you can use 'dayOfWeek' to get the day as a number
+            console.log(dayOfWeek);
+
+            const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const dayName = dayNames[dayOfWeek]; // Get the day name
+            console.log(dayName); // Example: If 'dayOfWeek' is '5', this will  'Friday'
+
+
+            // pull out dept text 
+            const deptsingletypeElements = document.querySelectorAll('.deptsingletype');
+            const departmentTextArray = [];
+
+            deptsingletypeElements.forEach(function (element) {
+                departmentTextArray.push(element.textContent.trim());
+            });
+
+            const departmentText = departmentTextArray.join(', ');
+
+
+
+            const desigsingletypeElements = document.querySelectorAll('.desigsingletype');
+            const desigTextArray = [];
+
+            desigsingletypeElements.forEach(function (element) {
+                desigTextArray.push(element.textContent.trim());
+            });
+
+            const desigText = desigTextArray.join(', ');
+            formDetails.innerHTML = (` <div style="padding-right: 6px; padding-left: 6px;">
+
+<div class="header-body-details-second" style="border: 1px solid rgb(122, 133, 232);">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+    style="margin-left: 4px;margin-top: 8px;width: 24px;height: 14px;">
+    <p class="pdata" style="padding-left: 30px;align-items: center;">${holiday_name}</p>
+    <p class="pdata">${holiDate}</p>
+    <p class="pdata">${holiday_type}</p>
+    <p class="pdata">${departmentText}</p>
+    <p class="pdata">${desigText}</p>
+    <p class="pdata">${dayName}</p>
+
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <button type="button" style="background-color: transparent; border: none;">
+            <i class="fa-solid fa-pen" style="color: #bc9338; font-size: 20px;"></i>
+        </button>
+
+        <button type="button" style="background-color: transparent; border: none;">
+            <i class="fa-solid fa-trash-can" style="color: #485161; font-size: 20px;"></i>
+        </button>
+    </div>
+
+</div>
+</div>
+
+<!-- row per page and button like previous,next -->
+<div
+style="margin-top: 20%; width: 100%; height: 40px; background-color: rgb(238, 238, 238); display: flex;align-items: center;">
+
+<div class="firsthalf"
+    style="height: 20px; display: flex; align-items: center; padding: 0 10px;">
+    <span style="font-size: 14px">Row Per Page</span>
+    <select name="" id=""
+        style="margin-left: 15px; margin-right: 15px; width: 50px; border-radius: 4px;">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <span style="font-size: 14px">Showing 1-1 of 1 entries</span>
+</div>
+<div class="secondhalf" style="margin-left: 100px; display: flex; gap: 2px; height: 20px;">
+
+    <button class="firstone"
+        style="width: 80px;border: white; background-color: white;border-radius: 2px;color:rgb(34, 100, 165); font-size: 14px; text-align: center;align-items: center;">Previous</button>
+    <button class="secondone"
+        style="width: 20px;border: white; background-color: white;border-radius: 2px;color:rgb(34, 100, 165); font-size: 14px; text-align: center;align-items: center;">1</button>
+    <button class="thirdone"
+        style="width: 45px;border: white; background-color: white;border-radius: 2px;color:rgb(34, 100, 165); font-size: 14px; text-align: center;align-items: center;">Next</button>
+
+</div>
+
+</div>`);
+
+            //                     }`;
+        }
+
+        function removeDepartment(button) {
+            const departmentToRemove = button.parentElement;
+            departmentToRemove.remove();
+            // updateFormDetails();
+        }
+
+        function removeDesig(button) {
+            const desigToRemove = button.parentElement;
+            desigToRemove.remove();
+            // updateFormDetails();
+        }
+
+        createButton.addEventListener('click', function (e) {
+
+            e.preventDefault();
+            popupform.classList.add('hidden');
+            updateFormDetails()
+
+        })
+
+        otherbtn.addEventListener('click', function (e) {
+
+            e.preventDefault();
+            form1.classList.add('hidden');
+            form2.classList.remove('hidden');
+
+            document.querySelector(".bckcolor").style.backgroundColor = "rgb(221, 221, 221)"
+            document.querySelector(".shftbtn2").style.backgroundColor = "#ffffff"
+
+        })
+
+        newbtn.addEventListener('click', function (e) {
+            form1.classList.remove('hidden');
+            form2.classList.add('hidden');
+
+            document.querySelector(".shftbtn2").style.backgroundColor = "rgb(221, 221, 221)"
+            document.querySelector(".bckcolor").style.backgroundColor = "#ffffff"
+
+        })
+    </script>
+</body>
+
+</html>

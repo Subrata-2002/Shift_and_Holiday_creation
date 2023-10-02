@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/shiftstyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<script type="module" src="./js/time.js"></script>
+<script type="module" src="./js/shift.js"></script>
+
+
+<body>
+
+    <div class="mcontainer">
+
+        <div class="container-left">
+
+            <nav class="sidebar">
+                <header>
+
+                    <div style="display: flex;">
+                    
+                        <div class="headertime">
+                            <div class="leftdate" style="padding-bottom: 16px;">
+                                <p class="todaydate" style="margin-top: 34px;">Today</p>
+                                <p class="datemonth" style="margin-top: -20px;" id="date"></p>
+                            </div>
+                            <div class="righttime" style="margin-left: 10px;">
+    
+                                <span class="timeonly" id="time" style="margin-left: 10px;"><p class="hourss">hrs.</p></span>
+                                <p class="counting" style="margin-top: -8px;">counting...</p>
+                            </div>
+                        </div>
+                        
+                            <!-- that three line icon when make it mobile size  -->
+                            <div class="app-icon">
+    
+                                <button style="font-size: 40px;font-weight: 500;border: none;"
+                                    id="vrtclline">&#9776;</button>
+                            </div>
+                    </div>
+
+                    <div class="sngleline"></div>
+                </header>
+
+
+                <div class="menu-bar" id="leftmenu">
+                    <div class="menu">
+
+                        <ul class="menu-links">
+                            <div style="padding-left: 5px; padding-right: 5px;">
+
+                                <li class="my-link">
+                                    <a href="./index.html">
+                                        <!-- <i class="fa-solid fa-house icon"></i> -->
+                                        <i class="fas fa-th-large icon"></i>
+
+                                        <span class="text nav-text">All Apps</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <!-- <i class="fa-solid fa-house icon"></i> -->
+                                        <i class="fas fa-chart-bar icon"></i>
+                                        <span class="text nav-text">Dashboard</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-users icon"></i>
+                                        <span class="text nav-text">Employees</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-list-check icon"></i>
+                                        <span class="text nav-text">Roles And Premissions</span>
+                                    </a>
+                                </li>
+
+                                <li class="my-link">
+                                    <a href="./index2.html">
+                                        <i class="fas fa-clock icon"></i>
+                                        <!-- <span class="text nav-text" onclick="$('#reportOptionsHidden').toggle('fast')">Time And Attendence</span> -->
+                                        <span class="text nav-text">Time And Attendence</span>
+
+                                        <!-- <button >Time and attendence</button> -->
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-location-dot icon"></i>
+                                        <span class="text nav-text">Geo Fence</span>
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fa-solid fa-person-walking-arrow-right icon"></i>
+                                        <span class="text nav-text">Leave</span>
+                                    </a>
+                                </li>
+                                <li class="my-link">
+                                    <a href="#">
+                                        <i class="fas fa-file-alt icon"></i>
+                                        <span class="text nav-text">Reports</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                        <div class="righttime genparent">
+                            <span class="timeonly gen" >GewinnsHR</span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="container-right">
+            <div class="container-right-top">
+                <div class="header-top">
+
+                    <div class="allcontents">
+
+                        <div class="frstcontents">
+
+                            <input type="search" class="srchcon" placeholder="Search">
+                        </div>
+
+                        <div class="scndcontents">
+
+                            <p style="font-size: 20px;margin-bottom: 0rem;">English (UK)</p>
+                            <select name="" id="" class="selecop"></select>
+                        </div>
+
+                        <div class="thirdcontents">
+
+                            <div class="allinline">
+                                <p class="firsttxt">Radheshyam Mallick</p>
+                                <p class="secondtxt">ID: SM/KMC/5/002</p>
+                                <p class="thirdtxt">ADMIN</p>
+                            </div>
+                            <div class="imgandoptn">
+                                <img class="mimg" src="./images/profile.jpg" alt="">
+                                <select name="" id="" class="optn"></select>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="container-right-middle">
+
+                <div class="header-middle">
+                    <div class="name">
+                        <a href="./holiday.html" class="apply">Holiday</a>
+                        <a href="./shift.html" class="apply" id="applyclr1">Shift</a>
+                        <a class="apply">Leave</a>
+                        <a class="apply">Roaster</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-right-body">
+
+                <div class="header-body">
+                    <!-- <h2>hiiiiiiiiiiiiiiii</h2> -->
+                    <div class="mheader-body-details">
+                        <div>
+                            <h3 class="myh2">SHIFT DETAILS</h3>
+                        </div>
+
+                        <div style="display: flex; gap: 2%;">
+
+                            <select class="optn" id="statusSelect">
+                                <option value="">All</option>
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                            <select class="optn" name="" id="toggleSelect">
+                                <option style="background-color: white; color: rgb(3, 98, 102);" value="Add New">Add
+                                    Shift</option>
+                                <option value="Create New" id="createshift">Create New</option>
+                                <option value="Bulk Upload">Bulk Upload</option>
+                            </select>
+                            <!-- <div style="border: 1px solid black; width: 150px; height: 40px; border-radius: 6px;">Add Shift</div> -->
+                        </div>
+                    </div>
+
+                    <!-- header body form  -->
+                    <div style="padding-right: 6px; padding-left: 6px;">
+
+                        <div class="header-body-details-second"
+                            style="height: 30px;justify-content:space-between; display: flex; width:auto;height: auto; margin-top: 15px; border: 1px solid blanchedalmond; background-color:rgb(230, 228, 228);">
+                            <p class="pdata" style="padding-left: 30px;align-items: center;">Shift Name</p>
+                            <p class="pdata">Start Time</p>
+                            <p class="pdata">End Time</p>
+                            <p class="pdata">Grace Entry Period</p>
+                            <p class="pdata">Grace exit Period</p>
+                            <p class="pdata">Status</p>
+                            <p class="pdata" style="margin-right: 50px;">Employee count</p>
+                            <!-- <p class="pdata"></p> -->
+
+
+                        </div>
+                    </div>
+
+                    <div id="formDetails">
+                        <!-- i show form data here  -->
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- //model  -->
+
+
+    <!-- form  -->
+
+   
+        
+        <div class="popup hidden" id="popupform">
+            <div class="popup-content">
+    
+                <div class="firstpop">
+                    <button class="dltbtn" id="exitform">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+    
+                <div class="secondpop">
+                    <input type="button" value="New" class="shftbtn btn1">
+                    <input type="button" value="Other" class="shftbtn btn2">
+                </div>
+    
+                <div class="middlepop">
+    
+                    <form class="firstform" id="mainForm">
+    
+    
+                        <!-- form1 data  -->
+    
+                        <div id="form1">
+    
+                            <div class="col d-flex justify-content-center align-items-center">
+    
+                                <div class="row singletxtfld">
+                                    <input type="text" class="form-control"  id="shift_name">
+                                    <label class="placeholder-label" for="shift_dur">Shift name</label>
+    
+                                    <div class="mdltxt">
+                                        <span>Shift Name<sup style="color: red;">*</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="time" class="form-control" value="00:00:00" id="start_time">
+                                    <label class="placeholder-label" for="shift_dur">24 Hrs</label>
+    
+                                    <div class="mdltxt">
+                                        <span>Start Time<sup style="color: red;">*</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="time" class="form-control" value="00:00:00" id="end_time">
+                                    <label class="placeholder-label" for="shift_dur">24 Hrs</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>End Time<sup style="color: red;">*</sup></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="time" class="form-control" value="00:00:00" id="shift_dur">
+                                    <label class="placeholder-label" for="shift_dur">Hours</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>Total Shift Duration</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="time" class="form-control" value="00:00:00" id="threshold">
+                                    <label class="placeholder-label" for="shift_dur">Hours</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>Threshold for Half Day</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="time" class="form-control" value="00:00:00" id="hours_fullday">
+                                    <label class="placeholder-label" for="shift_dur">Hours</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>Min. hours for full day</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+    
+                        <!-- form2 data  -->
+    
+                        <div id="form2" class="hidden">
+    
+                            <!-- Form 2 fields -->
+                            <!-- <input type="text" id="field3" placeholder="Field 3">
+                        <input type="text" id="field4" placeholder="Field 4"> -->
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="text" class="form-control"  id="entry_period" >
+                                    <label class="placeholder-label" for="shift_dur">Minutes</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>Entery Grace Peroid</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="text" class="form-control"  id="exit_period" >
+                                    <label class="placeholder-label" for="shift_dur">Minutes</label>
+    
+                                    <div class="mdltxt2">
+                                        <span style="text-align: center;">Exit Grace Period</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+    
+                                <div class="row singletxtfld">
+                                    <input type="text" class="form-control"  id="checkin_time">
+                                    <label class="placeholder-label" for="shift_dur">Minutes</label>
+    
+                                    <div class="mdltxt2">
+                                        <span>Check-in before shift start time</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div style="width: 100%; margin-top: 5px; text-align: center; justify-content: center;">
+                                <p style="text-align: center; font-size: 12px; width: 80%; margin-left: 10%; height: auto;">
+                                    The time before the shift start time during which Employee check-in is considered for
+                                    attendence.</p>
+                            </div>
+    
+                            <div class="col d-flex justify-content-center align-items-center colmine">
+                                
+    
+                                <div class="row singletxtfld">
+                                    <input type="text" class="form-control"  id="checkout_time" >
+                                    <label class="placeholder-label" for="shift_dur">Minutes</label>
+                                    <div class="mdltxt2">
+                                        <span>Check-out after shift end time</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; margin-top: 5px; text-align: center; justify-content: center;">
+                                <p style="text-align: center; font-size: 12px; width: 80%; margin-left: 10%; height: auto;">
+                                    The after the end of shift during which Check-out is considered for attendence.</p>
+                            </div>
+                        </div>
+    
+                    </form>
+    
+                </div>
+    
+                <!-- button of next and add  -->
+                <div class="btmpop" style="height: 10%; padding-bottom: 20px;">
+                    <div class="mheader-body-details" style="margin-left: 2px; margin-right: 2px;">
+                        <div>
+                            <a href=""
+                                style="font-size:18px; font-weight:500; color: rgb(10,120,135); text-decoration: none;">Add
+                                New Shift</a>
+                        </div>
+    
+                        <div style="display: flex; gap: 4%;">
+    
+                            <button type="button"
+                                style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px;">Reset</button>
+                            <button
+                                style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px;"
+                                id="nextButton">Next</button>
+                            <button
+                                style="border: 1px solid rgb(2, 91, 113); height: 30px; width: 100px; border-radius:6px; "
+                                class="hidden" id="submitButton">Submit</button>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+    <div id="popupupdate">
+
+        <div class="boxcontent">
+
+            <span class="editshift">Edit Shift</span>
+            <span class="editshift">Assign Shift</span>
+            <span class="editshift">Copy Shift</span>
+            <span class="editshift">Inactive</span>
+            <span class="editshift">Delete Shift</span>
+        </div>
+
+    </div>
+   
+</body>
+
+</html>
